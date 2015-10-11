@@ -11,6 +11,7 @@ import org.bukkit.event.player.PlayerChatEvent;
 
 
 
+@SuppressWarnings("deprecation")
 public class ChatMuteListener implements Listener 
 {
 	  public final Logger logger = Logger.getLogger("Minecraft");
