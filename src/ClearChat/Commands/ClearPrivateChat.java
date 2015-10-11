@@ -19,11 +19,11 @@ public class ClearPrivateChat implements CommandExecutor
 		 Player player = (Player)sender;
 
 		 if (commandLable.equalsIgnoreCase("lcc"))
-		 if ((player.hasPermission("clearchat.lcc"))) 
+		 if ((player.hasPermission("clearchat.lcc")) ||  (player.hasPermission("clearchat.*")))
 		 {
 		    for(int i = 0; i <= 100; i++) 
 		    { player.sendMessage("");}
-		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + ChatColor.AQUA +  "Du hast deinen eignen Chat gelöscht");
+		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "] " + ChatColor.DARK_GREEN +  "Du hast deinen eignen Chat gelöscht");
 		 }		       
 		 else 
 		 {sender.sendMessage(MessageHandler.getMessage("console-use-command"));}
