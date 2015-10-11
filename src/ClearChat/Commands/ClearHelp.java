@@ -17,10 +17,10 @@ public class ClearHelp implements CommandExecutor
 
 		      if ((commandlable.equalsIgnoreCase("chelp")))
 		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " ======================================");
-		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /cc -" + ChatColor.WHITE + " Clear the Server Chat");
-		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /lcc -" + ChatColor.WHITE + " Clear the lokal Chat");
-		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /crl -" + ChatColor.WHITE + " Reloaded messages.yml");
-		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /cm -" + ChatColor.WHITE + " Muted a Player");
+		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /cc" + ChatColor.WHITE + " - Clear the Server Chat");
+		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /lcc" + ChatColor.WHITE + " - Clear the lokal Chat");
+		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /crl" + ChatColor.WHITE + " - Reloaded messages.yml");
+		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " /cm" + ChatColor.WHITE + " - Muted a Player");
 		      player.sendMessage(ChatColor.WHITE + "[" + ChatColor.GOLD + "ClearChat" + ChatColor.WHITE + "]" + ChatColor.YELLOW + " ======================================");
 		      
 		      
