@@ -15,7 +15,7 @@ public class ChatReload implements CommandExecutor
 	      Player player = (Player)sender;
 
 	      if (commandLable.equalsIgnoreCase("crl"))
-	        if ((player.hasPermission("clearchat.rl"))) {
+	        if ((player.hasPermission("clearchat.rl")) ||  (player.hasPermission("clearchat.*"))) {
 	          ConfigReloader.reloadMessage();
 	          player.sendMessage(MessageHandler.getMessage("re-loaded"));
 	        } 
