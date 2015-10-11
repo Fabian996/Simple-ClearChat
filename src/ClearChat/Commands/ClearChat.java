@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
 import de.Fabian.SClearChat.Main;
 import de.Fabian.SClearChat.MessagesConfig.MessageHandler;
 
@@ -15,6 +16,7 @@ public class ClearChat implements CommandExecutor
 	  public final Logger logger = Logger.getLogger("Minecraft");
 	  
 	  
+	  @SuppressWarnings("unused")
 	  private Main plugin;
 
 	  public void ChatSystemCommands(Main plugin)
@@ -27,16 +29,13 @@ public class ClearChat implements CommandExecutor
 	      Player player = (Player)sender;
 
 	      if (commandLable.equalsIgnoreCase("cc"))
-	        if ((player.hasPermission("clearchat.cc")) || (player.isOp())) {
+	        if ((player.hasPermission("clearchat.cc")) ||  (player.hasPermission("clearchat.*"))) {
 	            for (Player p : Bukkit.getOnlinePlayers())
 	            {
 	              for (int x = 0; x < 120; x++) {
-	                p.sendMessage(" ");
-
-	                if (x != 119)
-	                  continue;
-	                Bukkit.broadcastMessage(MessageHandler.getMessage("clear-chat").replace("%player%", player.getName()));
+	                player.sendMessage(" ");
 	              }
+	              Bukkit.broadcastMessage(MessageHandler.getMessage("clear-chat").replace("%player%", player.getName()));
 	        	}
 	        }
 
