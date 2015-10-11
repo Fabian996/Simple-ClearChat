@@ -1,25 +1,21 @@
-name: Simple ClearChat
-version: 2.2
+name: ClearChat
+version: 2.3
 main: de.Fabian.SClearChat.Main
 author: Fabian996
 
 commands:
   cm:
     description: Mute a Player
-    usage:
-    
+    usage:  
   crl: 
     description: Load the Config
     usage: 
-
   chelp:
     description: Clear the Chat
     usage: 
-
   cc:
     description: Clear the Chat
-    usage: 
-    
+    usage:  
   lcc: 
     description: Clear private Chat
     usage: 
@@ -33,3 +29,5 @@ permission:
     description: Clear the Chat
   clearchat.lcc:
     description: Clear the Chat
+  clearchat.*:
+    description: You are all Permissions
