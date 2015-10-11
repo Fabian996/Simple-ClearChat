@@ -5,7 +5,6 @@ import java.io.IOException;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import de.Fabian.SClearChat.Commands.ChatMute;
 import de.Fabian.SClearChat.Commands.ChatReload;
 import de.Fabian.SClearChat.Commands.ClearChat;
@@ -25,11 +24,11 @@ public class Main extends JavaPlugin
 	
 	public void onEnable()
 	{
-	System.out.println("[ClearChat] =================================");
-	System.out.println("[ClearChat] Author: Fabian996");
-	System.out.println("[ClearChat] Version: v" + getDescription().getVersion());
-	System.out.println("[ClearChat] Status: Aktiviert");
-	System.out.println("[ClearChat] =================================");
+	    System.out.println("[ClearChat] =================================");
+	    System.out.println("[ClearChat] Author: Fabian996");
+	    System.out.println("[ClearChat] Version: v" + getDescription().getVersion());
+	    System.out.println("[ClearChat] Status: Aktiviert");
+	    System.out.println("[ClearChat] =================================");
 	    
 	    new ConfigLoader().load();
 	    MessageHandler.reload();
@@ -53,11 +52,11 @@ public class Main extends JavaPlugin
 	}
 	public void onDisable()
 	{
-	System.out.println("[ClearChat] =================================");
-	System.out.println("[ClearChat] Author: Fabian996");
-	System.out.println("[ClearChat] Version: v" + getDescription().getVersion());
-	System.out.println("[ClearChat] Status: Aktiviert");
-	System.out.println("[ClearChat] =================================");
+	    System.out.println("[ClearChat] =================================");
+	    System.out.println("[ClearChat] Author: Fabian996");
+	    System.out.println("[ClearChat] Version: v" + getDescription().getVersion());
+	    System.out.println("[ClearChat] Status: Deaktiviert");
+	    System.out.println("[ClearChat] =================================");
 	}
 	
 	public static void saveMessages()
