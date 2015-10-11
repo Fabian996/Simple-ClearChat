@@ -18,27 +18,27 @@ public class ChatMute implements CommandExecutor {
 	      Player player = (Player)sender;
 
 	      if (commandlable.equalsIgnoreCase("cm")) {
-	        if ((player.hasPermission("clearchat.cm"))) {
-	          if (Muted) {
-	            player.sendMessage(MessageHandler.getMessage("chat-for-players-on"));
-	            Bukkit.broadcastMessage(MessageHandler.getMessage("chatmute-chat-enabled").replace("%player%", player.getDisplayName()));
-	            Muted = false;
-	          }
-	          else
-	          {
-	            player.sendMessage(MessageHandler.getMessage("chat-for-players-off"));
-	            Bukkit.broadcastMessage(MessageHandler.getMessage("chatmute-chat-disabled").replace("%player%", player.getDisplayName()));
-	            Muted = true;
-	          }
-	          return true;
-	        }
-	       
-	    } 
-	    else {
-	      sender.sendMessage(MessageHandler.getMessage("console-use-command"));
-	    }
+	        if ((player.hasPermission("clearchat.cm")) ||  (player.hasPermission("clearchat.*"))) {
+	        	Player target = Bukkit.getServer().getPlayer(args[0]);
+                if (Muted) {
+                    sender.sendMessage(MessageHandler.getMessage("chatmute-chat-enabled"));
+                    target.sendMessage(MessageHandler.getMessage("chat-for-players-on"));
+                    Bukkit.broadcastMessage(MessageHandler.getMessage("chatmute-chat-enabled").replace("%player%", target.getDisplayName()));
+                    Muted = false;
+                }
+                else
+                {
+                    sender.sendMessage(MessageHandler.getMessage("chatmute-chat-disabled"));
+                    target.sendMessage(MessageHandler.getMessage("chat-for-players-off"));
+                    Bukkit.broadcastMessage(MessageHandler.getMessage("chatmute-chat-disabled").replace("%player%", target.getDisplayName()));
+                    Muted = true;
+                }
+                return true;
+	      }
 
-	  }
-		return false;
+	      }
+
+	    }
+		return false;	 
+		}
 	}
-}
